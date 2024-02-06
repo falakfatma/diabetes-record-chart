@@ -1,0 +1,18 @@
+.mainPage{
+    width: 90%;
+    margin: auto;
+    background: aliceblue;
+}
+.inp_nav{
+    width: 20rem;
+    height: 2rem;
+    font-size: large;
+    padding: .5rem;
+    margin: .5rem;
+}
+.box{
+    width: 30rem;
+    font-size: larger;
+    border: 2px solid;
+    border-radius: .5rem;
+}
