@@ -16,3 +16,8 @@
     border: 2px solid;
     border-radius: .5rem;
 }
+.btn{
+    padding: .9rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}

@@ -1,24 +1,17 @@
-import React, { Component } from 'react';
+import React,{Component} from "react";
 
-class TestResult extends Component {
-    constructor(){
-        super()
-        this.state = {
-            TestResult : `140`
-        }
-    }
-    textResult = (event) =>{
-        this.setState = {
-            TestResult : event.target.value
-        }
-    }
+class Box extends Component {
     render(){
-        return (
-        <div> 
-            <input className='resultBox' value={this.state.TestResult} onInput={this.textResult}/>
-        </div>
+        return(
+            <div className='box'>
+            <p>
+            Date : {this.props.dateVal}
+            </p> 
+            <p>
+              Number Result : {this.props.diabetesRecord}
+            </p> 
+          </div>
         )
     }
 }
-
-export default TestResult;
+export default Box;
