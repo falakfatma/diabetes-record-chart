@@ -3,14 +3,16 @@ import React, { Component,useEffect,useState } from 'react'
 import SugerBox from './Components/Suger'
 // const Data = 
 function App() {
-  const [storeArr,setstoreArr] = useState([]) 
+  // ------CRUD -----
+  // Create , Read, Update  , Delete
+  const [storeArr,setstoreArr] = useState([Object.keys(localStorage)]) 
   const date = new Date()
   const dateInString = date.toLocaleDateString()
  // TIme 
   const key = []
   const value = []
   useEffect(()=>{
-
+    
   })
 
  const hour = date.getHours()
@@ -21,6 +23,9 @@ function App() {
 
   //   // }
   // })
+  function createFunction(params) {
+    
+  }
   const setDateResultFunction = (e) => {
     setDateResult(e.target.value);
   }
@@ -36,10 +41,9 @@ function App() {
     }
   }
   const showResultOfLocalStorage =()=>{
-    key.push(Object.keys(localStorage))
     value.push(Object.values(localStorage))
     for (let i = 0 ; i < localStorage.length; i++) {
-      console.log(key[i], value[1]);
+        console.log(key[i] ,value[i] )
     }
   }
   
@@ -50,6 +54,13 @@ function App() {
         <button className='btn' onClick={setResultInLocalStorage}>Click</button>   
         <button className='btn' onClick={showResultOfLocalStorage}>See Data</button>   
         <SugerBox dateVal={dateResult} diabetesRecord={diabetesNumberRecord}/>
+        {
+          storeArr.map((val)=>{
+            <h1>
+              value  : {val}
+            </h1>
+          })
+        }
     </div>
   );
 }
